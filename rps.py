@@ -1,58 +1,39 @@
-from random import randint, random
+from random import choice
 
 
 
 def game():
     
     d = {}
-    # rand = random.randst(a, b, c)
-    
-    # a = "Rock"
-    # b = "Paper"
-    # c = "Scissors"
+
 
     while True:
         choices = ["rock", "paper", "scissors"]
+<<<<<<< HEAD
         computer = random.choice(choices)
+=======
+        computer = choice(choices)
+>>>>>>> d66d1361ef797aef4c6231ae356982edc07ea6b4
         x = input("Choose rock, paper, scissors or say 'quit' to quit. ")
-        if x.lower().strip() == "rock":
-            if computer == "paper".lower().strip():
-                print("You Lose")
+        if x == computer:
+            print("It's a tie!") 
+        elif x.lower().strip() == "rock":
+            if computer == "scissors":
+                print("You Win!!")
+            if computer == "paper":
+                print("You Lose!!")
         elif x.lower().strip() == "scissors":
-            if computer == "rock".lower().strip():
+            if computer == "rock":
                 print("You Lose")
-        elif x.lower().strip() == "scissors":
-            if computer == "paper".lower().strip():
-                print("You Win")       
+            if computer == "paper":
+                print("You Win")     
         elif x.lower().strip() == "paper":
-            if computer == "scissors".lower().strip():
+            if computer == "scissors":
                 print("You Lose")
-        
+            if computer == "rock":
+                print("You Win!")
         else:
-            print("You quit!")
+            print("You quit! Thank you for playing")
+        break
 
 game()
-
-
-
-
-
-
-
-        #     if cart.lower().strip() == "show":
-        #         print("Here is what is in your shopping cart." + str(items) + " You can say 'quit' to quit. ")
-        #     if cart.lower().strip() == "add":
-        #         item = input("Enter item to add to list :")
-        #         items.append(item)
-        #         print("An item has been added to your shopping cart. ")
-        #     if cart.lower().strip() == "delete":
-        #         item2 = input("Enter the item you would like removed from your shopping cart or say 'quit' to quit. ")
-        #         items.remove(item2)
-        #         print("Your item has been removed from your shopping cart.")
-        #     clear_output   
-        # if x.lower().strip() == "quit" or cart.lower().strip()== "quit":
-        #     print(f"Here is your current shopping list: " + str(items))
-        # break
-            
-        # d[x] = cart
-        
