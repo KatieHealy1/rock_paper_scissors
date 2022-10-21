@@ -13,7 +13,7 @@ def game():
 
     while True:
         choices = ["rock", "paper", "scissors"]
-        computer = choices[randint(0,2)]
+        computer = random.choice(choices)
         x = input("Choose rock, paper, scissors or say 'quit' to quit. ")
         if x.lower().strip() == "rock":
             if computer == "paper".lower().strip():
