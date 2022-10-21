@@ -1,28 +1,37 @@
-from random import random
+from random import randint, random
+
 
 
 def game():
     
     d = {}
-    rand = random.randstr(a, b, c)
-
-    a = "Rock"
-    b = "Paper"
-    c = "Scissors"
+    # rand = random.randst(a, b, c)
+    
+    # a = "Rock"
+    # b = "Paper"
+    # c = "Scissors"
 
     while True:
+        choices = ["rock", "paper", "scissors"]
+        computer = choices[randint(0,2)]
         x = input("Choose rock, paper, scissors or say 'quit' to quit. ")
-        if x.lower().strip() == "Rock" and rand == b.lower().strip():
-            print("You Lose")
-        elif x.lower().strip() == "Scissors" and rand == a.lower().strip():
-            print("You Lose")
-        elif x.lower().strip() == "Paper" and rand == c.lower().strip():
-            print("You Lose")
+        if x.lower().strip() == "rock":
+            if computer == "paper".lower().strip():
+                print("You Lose")
+        elif x.lower().strip() == "scissors":
+            if computer == "rock".lower().strip():
+                print("You Lose")
+        elif x.lower().strip() == "scissors":
+            if computer == "paper".lower().strip():
+                print("You Win")       
+        elif x.lower().strip() == "paper":
+            if computer == "scissors".lower().strip():
+                print("You Lose")
         
         else:
             print("You quit!")
 
-
+game()
 
 
 
