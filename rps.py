@@ -9,11 +9,10 @@ def game():
 
     while True:
         choices = ["rock", "paper", "scissors"]
-<<<<<<< HEAD
-        computer = random.choice(choices)
-=======
+
+
         computer = choice(choices)
->>>>>>> d66d1361ef797aef4c6231ae356982edc07ea6b4
+
         x = input("Choose rock, paper, scissors or say 'quit' to quit. ")
         if x == computer:
             print("It's a tie!") 
