@@ -3,33 +3,36 @@ from random import choice
 
 
 def game():
-    
-    d = {}
-
 
     while True:
+        
         choices = ["rock", "paper", "scissors"]
         computer = choice(choices)
-        x = input("Choose rock, paper, scissors or say 'quit' to quit. ")
-        if x == computer:
-            print("It's a tie!") 
-        elif x.lower().strip() == "rock":
-            if computer == "scissors":
-                print("You Win!!")
+        a = "Quit"
+        userInput = input("Choose rock, paper, scissors or type 'quit' to quit: ")
+        if(userInput == computer):
+                print("The computer also chose " + userInput + " so, it's  a tie.")
+        elif userInput.lower() == "rock":
             if computer == "paper":
-                print("You Lose!!")
-        elif x.lower().strip() == "scissors":
-            if computer == "rock":
-                print("You Lose")
-            if computer == "paper":
-                print("You Win")     
-        elif x.lower().strip() == "paper":
+                print("You Lose!! Computer chose " + computer + ". Try again, see if you can beat the computer!")
             if computer == "scissors":
-                print("You Lose")
+                print("You Win!! Computer chose " + computer)           
+        elif userInput.lower() == "scissors":
             if computer == "rock":
-                print("You Win!")
+                print("You Lose!! Computer chose " + computer + ". Try again, see if you can beat the computer!")
+            if computer == "paper":
+                print("You Win!! Computer chose " + computer)    
+        elif userInput.lower() == "paper":
+            if computer == "scissors":
+                print("You Lose!! Computer chose " + computer + ". Try again, see if you can beat the computer!")
+            if computer == "rock":
+                print("You Win!! Computer chose " + computer) 
+        elif userInput != a.lower().strip():
+            print("invalid name")
         else:
             print("You quit! Thank you for playing")
-        break
-
+            break
+   
 game()
+
+
